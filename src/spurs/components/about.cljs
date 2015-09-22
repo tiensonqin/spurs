@@ -1,4 +1,4 @@
-(ns spurs.component.about
+(ns spurs.components.about
   (:require [spurs.db :refer [app-state]]))
 
 (defn about []

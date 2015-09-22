@@ -6,9 +6,9 @@
             [secretary.core :as secretary]
             [goog.events :as events]
             [goog.history.EventType :as EventType]
-            [spurs.component.home :refer [home]]
-            [spurs.component.about :refer [about]]
-            [spurs.component.material :refer [material]]
+            [spurs.components.home :refer [home]]
+            [spurs.components.about :refer [about]]
+            [spurs.components.material :refer [material]]
             [cljsjs.material]))
 
 (enable-console-print!)

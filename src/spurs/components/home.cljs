@@ -1,4 +1,4 @@
-(ns ^:figwheel-always spurs.component.home
+(ns ^:figwheel-always spurs.components.home
   (:require [spurs.db :refer [app-state]]))
 
 (defn home []

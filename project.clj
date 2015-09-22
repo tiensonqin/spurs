@@ -36,6 +36,11 @@
                          :optimizations :advanced
                          :pretty-print false}}]}
 
+  :profiles {:dev {:dependencies [[com.cemerick/piggieback "0.2.1"]
+                                  [org.clojure/tools.nrepl "0.2.10"]]
+                   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}}
+
+
   :figwheel {
              ;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
@@ -45,6 +50,12 @@
 
              ;; Start an nREPL server into the running figwheel process
              :nrepl-port 7888
+
+             ;; Load CIDER, refactor-nrepl and piggieback middleware
+             :nrepl-middleware ["cider.nrepl/cider-middleware"
+                                "refactor-nrepl.middleware/wrap-refactor"
+                                ;; "cemerick.piggieback/wrap-cljs-repl"
+                                ]
 
              ;; Server Ring Handler (optional)
              ;; if you want to embed a ring handler into the figwheel http-kit
